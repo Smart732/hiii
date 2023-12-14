@@ -7,8 +7,7 @@ const port=process.env.port||5000
 app.listen(port,()=>{
 console.log("server start");
 }) 
-app.get("/",(req,res)=>{
-   
+app.get("/hi",(req,res)=>{
     let transporter = nodemailer.createTransport({
         service: 'Gmail',
         port: 587,
@@ -36,5 +35,10 @@ app.get("/",(req,res)=>{
     }
     
   });
+  
+})
+app.get("/",(req,res)=>{
+   
+   res.send("hello singhaniya");
  
 })
