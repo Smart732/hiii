@@ -21,7 +21,7 @@ app.get("/",(req,res)=>{
   
   // setup email data with unicode symbols
   let mailOptions = {
-    from: '"Smart Singhaniya"<contactsinghaniya@gmail.com>',
+    from: 'contactsinghaniya@gmail.com',
     to: "contactbikash2020@gmail.com",
     subject: "testing nodemailer",
     text: "This is a test email sent from Node.js using nodemailer.",
