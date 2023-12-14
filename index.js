@@ -1,5 +1,6 @@
 const cluster = require("cluster");
 const os = require("os");
+const nodemailer=require("nodemailer")
 const PORT = process.env.PORT || 5000; // Use PORT instead of Port
 if (cluster.isMaster) {
   console.log(`Master ${process.pid} is running on Port ${PORT}`); // Corrected Port
@@ -14,7 +15,7 @@ if (cluster.isMaster) {
   const express = require("express");
   const app = express();
   app.use(express.json())
-app.get("/", (req, res) => {
+  app.get("/", (req, res) => {
     res.send("hello");
   });
   app.get("/hi",(req,res)=>{
